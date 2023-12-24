@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="uz.isystem.quiztime.presentation.home_screen.HomeScreen"
+        android:label="screen_home"
+        tools:layout="@layout/screen_home" >
+        <action
+            android:id="@+id/action_homeScreen_to_gameScreen"
+            app:destination="@id/gameScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameScreen"
+        android:name="uz.isystem.quiztime.presentation.game_screen.GameScreen"
+        android:label="screen_game"
+        tools:layout="@layout/screen_game" >
+        <argument
+            android:name="difficulty"
+            app:argType="string"
+            android:defaultValue="easy" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_gameScreen_to_resultScreen"
+            app:destination="@id/resultScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultScreen"
+        android:name="uz.isystem.quiztime.presentation.result_screen.ResultScreen"
+        android:label="screen_result"
+        tools:layout="@layout/screen_result" />
+</navigation>

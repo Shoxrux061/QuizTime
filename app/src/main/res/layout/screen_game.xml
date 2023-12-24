@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_bg"
+    android:orientation="vertical"
+    tools:context=".presentation.game_screen.GameScreen">
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginBottom="40dp"
+        android:visibility="gone"
+        android:id="@+id/next_btn"
+        android:background="@drawable/next_btn"
+        android:layout_gravity="bottom|center"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="55dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/ic_next"
+        android:backgroundTint="#FFF"
+        android:layout_height="55dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:minHeight="150dp">
+
+            <TextView
+                android:id="@+id/current_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/answer_frame"
+                android:fontFamily="sans-serif-light"
+                android:padding="10dp"
+                android:text="1/20"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center|top"
+                android:background="@drawable/timer_shape"
+                android:elevation="5dp">
+
+                <TextView
+                    android:id="@+id/timer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="30"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/answer_frame"
+                android:gravity="start|top"
+                android:minHeight="100dp"
+                android:id="@+id/frame"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/difficulty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/question_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp" />
+
+        <LinearLayout
+            android:id="@+id/multiple_answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/question_item"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center|start"
+                android:minHeight="60dp"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/question_item"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center|start"
+                android:minHeight="60dp"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/question_item"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center|start"
+                android:minHeight="60dp"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/question_item"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center|start"
+                android:minHeight="60dp"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

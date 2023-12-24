@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_gradient"
+    tools:context=".presentation.home_screen.HomeScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="60dp"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/easy_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selected_item"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Easy"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/medium_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Medium"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/hard_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Hard"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:background="@drawable/list_back"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp">
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:id="@+id/geog_btn"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="40dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/geog" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/geog_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Geography"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:id="@+id/history_btn"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/history" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/history_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="History"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp">
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/math_btn"
+                        android:layout_marginEnd="40dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/math" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/math_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Math"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:id="@+id/animals_btn"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/animal" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/animal_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Animals"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp">
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/sports_btn"
+                        android:layout_marginEnd="40dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/sport" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/sport_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Sports"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:id="@+id/game_btn"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/game" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/game_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Games"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp">
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/codding_btn"
+                        android:layout_marginEnd="40dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/codding" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/codding_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Computers"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:id="@+id/knowledge_btn"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/know" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/know_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Knowledge"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp">
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/politic_btn"
+                        android:layout_marginEnd="40dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/politic" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/politic_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Politic"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:id="@+id/nature_btn"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/nature" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/nature_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Nature"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp">
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/music_btn"
+                        android:layout_marginEnd="40dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/music" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/music_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Music"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:id="@+id/gadget_btn"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_gravity="top"
+                            android:elevation="10dp"
+                            android:src="@drawable/gadget" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/gadget_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Gadgets"
+                            android:textColor="@color/white"
+                            android:textSize="22sp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
